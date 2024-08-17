@@ -1,0 +1,57 @@
+{
+  "name": "gilmore-clothing",
+  "version": "0.1.0",
+  "bin": {
+    "gilmore-clothing": "bin/gilmore-clothing.js"
+  },
+  "scripts": {
+    "synth:develop": "STAGE=develop cdk synth --all",
+    "deploy:develop:stateful": "STAGE=develop cdk deploy develop-GilmoreClothingStatefulStack",
+    "deploy:develop:stateless": "STAGE=develop cdk deploy develop-GilmoreClothingStatelessStack",
+    "remove:develop": "STAGE=develop cdk destroy --all",
+    "synth:test": "STAGE=test cdk synth --all",
+    "deploy:test:stateful": "STAGE=test cdk deploy test-GilmoreClothingStatefulStack",
+    "deploy:test:stateless": "STAGE=test cdk deploy test-GilmoreClothingStatelessStack",
+    "remove:test": "STAGE=test cdk destroy --all",
+    "synth:staging": "STAGE=staging cdk synth --all",
+    "deploy:staging:stateful": "STAGE=staging cdk deploy staging-GilmoreClothingStatefulStack",
+    "deploy:staging:stateless": "STAGE=staging cdk deploy staging-GilmoreClothingStatelessStack",
+    "remove:staging": "STAGE=staging cdk destroy --all",
+    "synth:prod": "STAGE=prod cdk synth --all",
+    "deploy:prod:stateful": "STAGE=prod cdk deploy prod-GilmoreClothingStatefulStack",
+    "deploy:prod:stateless": "STAGE=prod cdk deploy prod-GilmoreClothingStatelessStack",
+    "remove:prod": "STAGE=prod cdk destroy --all"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.142",
+    "@types/convict": "^6.1.6",
+    "@types/jest": "^29.5.12",
+    "@types/node": "20.11.30",
+    "@types/uuid": "^10.0.0",
+    "aws-cdk": "2.136.0",
+    "esbuild": "^0.23.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "~5.4.3"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^2.6.0",
+    "@aws-lambda-powertools/metrics": "^2.6.0",
+    "@aws-lambda-powertools/tracer": "^2.6.0",
+    "@aws-sdk/client-dynamodb": "^3.620.0",
+    "@aws-sdk/client-sns": "^3.620.0",
+    "@aws-sdk/util-dynamodb": "^3.620.0",
+    "@middy/core": "^5.4.5",
+    "@middy/sqs-partial-batch-failure": "^5.4.5",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "aws-cdk-lib": "2.136.0",
+    "axios": "^1.7.4",
+    "constructs": "^10.0.0",
+    "convict": "^6.2.4",
+    "mongodb": "^6.8.0",
+    "source-map-support": "^0.5.21",
+    "uuid": "^10.0.0"
+  }
+}

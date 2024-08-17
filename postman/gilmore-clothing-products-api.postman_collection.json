@@ -1,0 +1,53 @@
+{
+  "info": {
+    "_postman_id": "a3cc9d2d-879e-4f35-8740-3696bfbf3d29",
+    "name": "gilmore-clothing-products-api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "752706"
+  },
+  "item": [
+    {
+      "name": "create-product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Classic Blue Jeans\",\n  \"description\": \"High-quality denim jeans with a classic fit. Perfect for everyday wear.\",\n  \"brand\": \"Giovani Clothing\",\n  \"category\": \"Jeans\",\n  \"gender\": \"Men\",\n  \"sizes\": [\"S\", \"M\", \"L\", \"XL\", \"XXL\"],\n  \"colors\": [\"Blue\"],\n  \"price\": 49.99,\n  \"inStock\": true,\n  \"material\": \"100% Cotton\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://{{url}}/api/v1/products/",
+          "protocol": "https",
+          "host": ["{{url}}"],
+          "path": ["api", "v1", "products", ""]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "list-products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://{{url}}/api/v1/products/",
+          "protocol": "https",
+          "host": ["{{url}}"],
+          "path": ["api", "v1", "products", ""]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "your-rest-api.execute-api.your-region.amazonaws.com"
+    }
+  ]
+}
